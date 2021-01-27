@@ -15,7 +15,7 @@ end
 
 private
 
-def messages
+def display_messages
   Telegram::Bot::Client.run(token) do |bot|
     bot.listen do |message|
       case message.text
