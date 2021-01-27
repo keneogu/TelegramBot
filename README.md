@@ -3,7 +3,7 @@
 
 # About the project
 
-This is a telegram bot that displays information about four west african nation, Nigeria, Togo, Senegal and Benin.
+This is a telegram bot that displays information about four west African nations, Nigeria, Togo, Senegal and Benin.
 
 ![telegram](https://user-images.githubusercontent.com/53356820/105992549-90320680-60a5-11eb-9063-65ff75c9866d.png)
 
