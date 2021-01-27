@@ -1,6 +1,8 @@
 require 'telegram/bot'
+require_relative 'content'
 
 token = "1583152588:AAHSFkxUfbonb-w-R58XrBbbfuFFhe2suWg"
+countries = Countries.new
 
 def messages
 Telegram::Bot::Client.run(token) do |bot|
@@ -19,7 +21,9 @@ Telegram::Bot::Client.run(token) do |bot|
 	when '/stop'
         bot.api.send_message(chat_id: message.chat.id, text:
           "Thanks for accessing, #{message.from.first_name}. Bye!", date: message.date)
-		
+	when '/Nigeria'
+		@countries.Nigeria
+		bot.api.send_message(chat_id: message.chat.id, text: @countries.Nigeria, date: message.date)
 	else
 		bot.api.send_message(chat_id: message.chat.id, text: "Invalid text!")
 	end
