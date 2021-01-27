@@ -1,5 +1,4 @@
-# rubocop: disable Metrics/AbcSize,Metrics/BlockLength,Metrics/CyclomaticComplexity,Metrics/MethodLength
-
+# rubocop: disable Metrics/MethodLength
 require 'telegram/bot'
 require_relative 'content'
 
@@ -48,5 +47,4 @@ def display_messages
     end
   end
 end
-
-# rubocop: disable Metrics/AbcSize,Metrics/BlockLength,Metrics/CyclomaticComplexity,Metrics/MethodLength
+# rubocop: enable Metrics/MethodLength
