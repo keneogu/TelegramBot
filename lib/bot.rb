@@ -1,3 +1,5 @@
+# rubocop: disable Metrics/MethodLength
+
 require 'telegram/bot'
 require_relative 'content'
 
@@ -29,20 +31,21 @@ def messages
         bot.api.send_message(chat_id: message.chat.id, text:
           "Thanks for accessing, #{message.from.first_name}. Bye!", date: message.date)
       when '/Nigeria'
-        @countries.Nigeria
-        bot.api.send_message(chat_id: message.chat.id, text: @countries.Nigeria, date: message.date)
+        @countries.nigeria
+        bot.api.send_message(chat_id: message.chat.id, text: @countries.nigeria, date: message.date)
       when '/Togo'
-        @countries.Togo
+        @countries.togo
         bot.api.send_message(chat_id: message.chat.id, text: @countries.Togo, date: message.date)
       when '/Benin'
-        @countries.Benin
-        bot.api.send_message(chat_id: message.chat.id, text: @countries.Benin, date: message.date)
+        @countries.benin
+        bot.api.send_message(chat_id: message.chat.id, text: @countries.benin, date: message.date)
       when '/Senegal'
-        @countries.Senegal
-        bot.api.send_message(chat_id: message.chat.id, text: @countries.Senegal, date: message.date)
+        @countries.senegal
+        bot.api.send_message(chat_id: message.chat.id, text: @countries.senegal, date: message.date)
       else
         bot.api.send_message(chat_id: message.chat.id, text: 'Invalid text! or country not avaliable ata the moment')
       end
     end
   end
 end
+# rubocop: enable Metrics/MethodLength
