@@ -14,7 +14,7 @@ end
 
 private
 
-def display_messages
+def messages
   Telegram::Bot::Client.run(token) do |bot|
     bot.listen do |message|
       case message.text
@@ -26,9 +26,6 @@ def display_messages
 		Use /stop to stop or end the bot
 		enter / + country name in west africa to obtain information about the country\n
 		example enter: /Nigeria  /Togo   /Benin  /Senegal")
-      when '/stop'
-        bot.api.send_message(chat_id: message.chat.id, text:
-          "Thanks for accessing, #{message.from.first_name}. Bye!", date: message.date)
       when '/Nigeria'
         @countries.nigeria
         bot.api.send_message(chat_id: message.chat.id, text: @countries.nigeria, date: message.date)
@@ -41,6 +38,9 @@ def display_messages
       when '/Senegal'
         @countries.senegal
         bot.api.send_message(chat_id: message.chat.id, text: @countries.senegal, date: message.date)
+      when '/stop'
+        bot.api.send_message(chat_id: message.chat.id, text:
+        "Thanks for accessing, #{message.from.first_name}. Bye!", date: message.date)
       else
         bot.api.send_message(chat_id: message.chat.id, text: 'Invalid text! or country not avaliable ata the moment')
       end
