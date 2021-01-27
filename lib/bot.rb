@@ -20,10 +20,10 @@ def display_messages
       case message.text
       when '/start'
         bot.api.send_message(chat_id: message.chat.id, text:
-        "Hello, #{message.from.first_name} \n
-		This is a ruby project created by kene \n
-		Use /start to start the bot\n
-		Use /stop to stop or end the bot\n
+        "Hello, #{message.from.first_name}
+		This is a ruby project created by kene
+		Use /start to start the bot
+		Use /stop to stop or end the bot
 		enter / + country name in west africa to obtain information about the country\n
 		example enter: /Nigeria  /Togo   /Benin  /Senegal")
       when '/stop'
@@ -34,7 +34,7 @@ def display_messages
         bot.api.send_message(chat_id: message.chat.id, text: @countries.nigeria, date: message.date)
       when '/Togo'
         @countries.togo
-        bot.api.send_message(chat_id: message.chat.id, text: @countries.Togo, date: message.date)
+        bot.api.send_message(chat_id: message.chat.id, text: @countries.togo, date: message.date)
       when '/Benin'
         @countries.benin
         bot.api.send_message(chat_id: message.chat.id, text: @countries.benin, date: message.date)
