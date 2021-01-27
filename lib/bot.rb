@@ -24,8 +24,7 @@ def messages
 		Use /start to start the bot\n
 		Use /stop to stop or end the bot\n
 		enter / + country name in west africa to obtain information about the country\n
-		example enter: /Nigeria  /Togo   /Benin  /Burkina_Faso
-		/Côte_D'Ivoire  /Senegal  /Sierra_Leone  /Ghana /Mauritania")
+		example enter: /Nigeria  /Togo   /Benin  /Senegal")
       when '/stop'
         bot.api.send_message(chat_id: message.chat.id, text:
           "Thanks for accessing, #{message.from.first_name}. Bye!", date: message.date)
@@ -42,7 +41,7 @@ def messages
         @countries.Senegal
         bot.api.send_message(chat_id: message.chat.id, text: @countries.Senegal, date: message.date)
       else
-        bot.api.send_message(chat_id: message.chat.id, text: 'Invalid text!')
+        bot.api.send_message(chat_id: message.chat.id, text: 'Invalid text! or country not avaliable ata the moment')
       end
     end
   end
