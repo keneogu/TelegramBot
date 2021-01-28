@@ -1,8 +1,5 @@
 # rubocop: disable Metrics/MethodLength
 
-require 'telegram/bot'
-require_relative 'bot'
-
 class Countries
   attr_reader :nigeria, :benin, :togo, :senegal
 

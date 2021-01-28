@@ -12,8 +12,6 @@ class Bot
   end
 end
 
-private
-
 def messages
   Telegram::Bot::Client.run(token) do |bot|
     bot.listen do |message|
