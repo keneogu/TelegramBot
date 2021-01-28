@@ -26,15 +26,6 @@ To get a local copy up and running follow these simple example steps.​
 4. Now use the command ruby bin/main.rb to automatically access the folder \bin and to start running the bot.
 5. If the bot starts running successfully, you'll see the message "The bot is working... Enjoy!" in your terminal.
 
-## How to Play
-
-1. Enter player names
-2. The first player will take the X sign, the second player takes O sign
-3. The players can choose from 1 to 9, but can't choose a place that already has a sign on it.
-4. Those numbers correspond to a position in the board
-5. The game goes until any player can have a sequence of 3 signs (rows,  columns or diagonals) then the player wins the game.
-6. When the board is filled and there is no sequence of 3 signs then it is a draw
-
 ## How to use the Bot
 
 1. Search for kenebot in your telegram app with the username kene1bot.
