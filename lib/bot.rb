@@ -1,4 +1,4 @@
-# rubocop: disable Metrics/MethodLength
+# rubocop: disable Metrics/MethodLength, Metrics/CyclomaticComplexity
 require 'telegram/bot'
 require_relative 'content'
 
@@ -55,4 +55,4 @@ class Bot
     bot.api.send_message(chat_id: message.chat.id, text: @countries.send(country), date: message.date)
   end
 end
-# rubocop: enable Metrics/MethodLength
+# rubocop: enable Metrics/MethodLength, Metrics/CyclomaticComplexity
