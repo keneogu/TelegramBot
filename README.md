@@ -21,9 +21,9 @@ Ruby
 To get a local copy up and running follow these simple example steps.​
 
 1. Download/clone this repository GitHub Repository on your computer.
-2. In your terminal, use the command cd to go to the place where you saved/cloned the repository. For example:  Desktop/User/Ruby-CapstoneProject/. You may use the command ls to see the files and repositories existent in your current location.
+2. In your terminal, use the command cd to go to the place where you saved/cloned the repository. For example:  Desktop/User/Ruby-CapstoneProject/. You may use the command `ls` to see the files and repositories existent in your current location.
 3. Still in the terminal, run the command bundle install.
-4. Now use the command ruby bin/main.rb to automatically access the folder \bin and to start running the bot.
+4. Now use the command `ruby bin/main.rb` to automatically access the folder \bin and to start running the bot.
 5. If the bot starts running successfully, you'll see the message "The bot is working... Enjoy!" in your terminal.
 
 ## How to use the Bot
