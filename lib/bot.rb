@@ -8,7 +8,6 @@ class Bot
   def initialize
     @token = '1583152588:AAHSFkxUfbonb-w-R58XrBbbfuFFhe2suWg'
     @countries = Countries.new
-    messages
   end
 
   def messages
@@ -17,7 +16,7 @@ class Bot
         case message.text
 
         when '/start'
-          bot.api.send_message(chat_id: message.chat.id, text: welcome_text(message))
+          bot.api.send_message(chat_id: message.chat.id, text: welcome_text(message.from.first_name))
         when '/Nigeria'
           country_selector('nigeria', bot, message)
 
@@ -42,13 +41,15 @@ class Bot
   end
 
   def welcome_text(message)
-    "Hello, #{message.from.first_name}
+    "Hello, #{message}
 		This is a ruby project created by kene\n
 		Use /start to start the bot\n
 		Use /stop to stop or end the bot\n
 		enter / + country name in west africa to obtain information about the country\n
     example enter: /Nigeria  /Togo   /Benin  /Senegal"
   end
+
+  private
 
   def country_selector(country, bot, message)
     @countries.send(country)

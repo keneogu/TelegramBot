@@ -1,3 +1,3 @@
 source 'http://rubygems.org'
-gem 'rspec-rails'
+gem 'rspec'
 gem 'telegram-bot-ruby'
